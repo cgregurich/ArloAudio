@@ -9,6 +9,11 @@ def rx_play_audio():
     print("Client: play audio")
     emit("play audio", broadcast=True)
 
+@socketio.on("message")
+def rx_message(message):
+    print(f"Client: '{message}'")
+    emit("message", message, broadcast=True)
+
 
 @app.route("/")
 def index():

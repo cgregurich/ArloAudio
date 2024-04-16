@@ -5,6 +5,13 @@ function playAudio() {
 }
 
 
+function displayMessage(data) {
+    console.log(data);
+    console.log("Message received!");
+}
+
 document.getElementById("play-button").addEventListener("click", playAudio);
+let msgsDiv = document.getElementById("messages");
 
 socket.on("play audio", playAudio);
+socket.on("message", displayMessage);

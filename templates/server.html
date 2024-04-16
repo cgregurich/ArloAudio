@@ -3,9 +3,7 @@
 {% block content %}
     <h1>Server</h1>
     <button id="play-button">play</button>
-    <!-- <audio controls>
-      <source src="https://dl.sndup.net/dv85/arloyoureokay.wav" type="audio/wav">
-    </audio> -->
+    <div id="messages"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='server.js') }}"></script>
 {% endblock %}
